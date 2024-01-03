@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getTopBusLines } from "../api/BusApi";
+import { mockBuses } from "../utils/mock-buses";
 
 interface IBus {
   busLine: number;
@@ -8,18 +9,19 @@ interface IBus {
 
 const BusCard = () => {
   const [busLines, setBusLines] = useState<IBus[]>([]);
-  const [busStopsToShow, setBusStopsToShow] = useState(5);
+  const [busStopsToShow, setBusStopsToShow] = useState(3);
 
   const showMore = () => {
     // do something to show the rest of the stops
     // modal?
+    setBusStopsToShow(mockBuses.length);
   };
 
   const showLess = () => {
-    setBusStopsToShow(5);
+    setBusStopsToShow(3);
   };
 
-  async function fetchBuses() {
+  /*   async function fetchBuses() {
     try {
       const response = await getTopBusLines();
       if (response?.status == 200) return response.data;
@@ -31,11 +33,11 @@ const BusCard = () => {
 
   useEffect(() => {
     fetchBuses().then((data) => setBusLines(data));
-  }, []);
+  }, []); */
 
   return (
     <>
-      {busLines.map((bus, index) => (
+      {mockBuses.map((bus, index) => (
         <div key={index} className="d-inline-flex p-4">
           <h4>Buss {bus.busLine}</h4>
           <ul>
@@ -44,9 +46,14 @@ const BusCard = () => {
                 {busStops}
               </li>
             ))}
-            {/* Add show more / less stops */}
+            {busStopsToShow === 3 ? (
+              <button key={index} onClick={showMore}>
+                Visa fler hållplatser
+              </button>
+            ) : (
+              <button onClick={showLess}>Visa färre hållplatser</button>
+            )}
           </ul>
-          {busStopsToShow === 5 ? <button onClick={showMore}>Visa fler hållplatser</button> : null}
         </div>
       ))}
     </>
