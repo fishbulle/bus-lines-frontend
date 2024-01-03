@@ -1,10 +1,9 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import BusCard from "./components/BusCard";
+import BusView from "./components/BusView";
 
 function App() {
   return (
     <>
-      <BusCard />
+      <BusView />
     </>
   );
 }

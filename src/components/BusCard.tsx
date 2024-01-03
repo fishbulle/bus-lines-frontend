@@ -12,6 +12,7 @@ const BusCard = () => {
                 {busStops}
               </li>
             ))}
+            {/* Add show more / less stops */}
           </ul>
         </div>
       ))}
