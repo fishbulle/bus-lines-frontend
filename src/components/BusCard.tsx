@@ -4,11 +4,13 @@ const BusCard = () => {
   return (
     <>
       {mockBuses.map((bus, index) => (
-        <div key={index}>
-          <h3>Buss {bus.busLine}</h3>
+        <div key={index} className="d-inline-flex p-4">
+          <h4>Buss {bus.busLine}</h4>
           <ul>
             {bus.stops.map((busStops, index) => (
-              <li key={index}>{busStops}</li>
+              <li key={index} style={{ listStyle: "none" }}>
+                {busStops}
+              </li>
             ))}
           </ul>
         </div>
@@ -17,4 +19,4 @@ const BusCard = () => {
   );
 };
 
-export default BusCard
+export default BusCard;
