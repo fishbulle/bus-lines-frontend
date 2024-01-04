@@ -1,7 +1,21 @@
+@font-face {
+  font-family: "Tiempos";
+  font-weight: 200;
+  font-display: fallback;
+  src: url("../src/fonts/TiemposHeadline-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-weight: 200;
+  font-display: fallback;
+  src: url("../src/assets/NunitoSans_7pt-Regular.ttf") format("truetype");
+}
+
 #root {
   margin: 0 auto;
   text-align: center;
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Nunito, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 }
@@ -9,4 +23,8 @@
 body {
   background-color: #242424;
   color: rgba(255, 255, 255, 0.87);
+}
+
+h1 {
+  font-family: Tiempos;
 }
