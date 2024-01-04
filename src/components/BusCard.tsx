@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getTopBusLines } from "../api/BusApi";
-import BusModal from "../BusModal";
+import BusModal from "./BusModal";
 
 interface IBus {
   busLine: number;
@@ -41,7 +41,7 @@ const BusCard = () => {
             <p>Antal stopp: {bus.stops.length}</p>
             <button
               key={index}
-              className="mt-4"
+              className="mt-3 px-3"
               onClick={() => showMore(index)}
             >
               Visa hållplatser
