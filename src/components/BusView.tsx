@@ -5,9 +5,9 @@ const BusView = () => {
     <>
       <div>
         <h1 className="mt-4">Topp 10 bussar med flest stopp i Stockholm</h1>
-        <p className="fst-italic">
+        <h6 className="fst-italic">
           Hämtat från SLs API Hållplatser och linjer 2
-        </p>
+        </h6>
       </div>
       <BusCard />
     </>
