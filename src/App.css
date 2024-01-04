@@ -7,9 +7,9 @@
 
 @font-face {
   font-family: "Nunito";
-  font-weight: 200;
+  font-weight: 400;
   font-display: fallback;
-  src: url("../src/assets/NunitoSans_7pt-Regular.ttf") format("truetype");
+  src: url("../src/fonts/Nunito-Regular.ttf") format("truetype");
 }
 
 #root {
