@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import { getTopBusLines } from "../api/BusApi";
-import { mockBuses } from "../utils/mock-buses";
-import { Modal } from "react-bootstrap";
 import BusModal from "../BusModal";
 
 interface IBus {
@@ -10,8 +8,7 @@ interface IBus {
 }
 
 const BusCard = () => {
-  // const [busLines, setBusLines] = useState<IBus[]>([]);
-  // const [busStopsToShow, setBusStopsToShow] = useState(3);
+  const [buses, setBuses] = useState<IBus[]>([]);
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
   const [showModal, setShowModal] = useState<boolean>(false);
   const closeModal = () => setShowModal(false);
@@ -21,11 +18,7 @@ const BusCard = () => {
     setShowModal(true);
   };
 
-  /*   const showLess = () => {
-    setBusStopsToShow(3);
-  }; */
-
-  /*   async function fetchBuses() {
+  async function fetchBuses() {
     try {
       const response = await getTopBusLines();
       if (response?.status == 200) return response.data;
@@ -36,13 +29,13 @@ const BusCard = () => {
   }
 
   useEffect(() => {
-    fetchBuses().then((data) => setBusLines(data));
-  }, []); */
+    fetchBuses().then((data) => setBuses(data));
+  }, []);
 
   return (
     <>
-      <div className="d-flex flex-row flex-wrap justify-content-center p-4">
-        {mockBuses.map((bus, index) => (
+      <div className="d-flex flex-row flex-wrap justify-content-center p-5">
+        {buses.map((bus, index) => (
           <div key={index} className="p-4 m-4">
             <h4>Buss {bus.busLine}</h4>
             <p>Antal stopp: {bus.stops.length}</p>
@@ -69,8 +62,3 @@ const BusCard = () => {
 };
 
 export default BusCard;
-
-/* {bus.stops.slice(0, busStopsToShow).map((busStops, idx) => (
-  <li key={idx} style={{ listStyle: "none" }}>
-    {index === expandedIndex ? <BusModal title={bus.busLine} body={busStops} /> : busStops}
-  </li> */
