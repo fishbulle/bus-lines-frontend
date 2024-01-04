@@ -7,6 +7,7 @@ export const mockBuses = [
       "Hållplats 3",
       "Hållplats 4",
       "Hållplats 5",
+      "Hållplats 6"
     ],
   },
   {
@@ -17,6 +18,10 @@ export const mockBuses = [
       "Hållplats 3",
       "Hållplats 4",
       "Hållplats 5",
+      "Hållplats 4",
+      "Hållplats 5",
+      "Hållplats 4",
+      "Hållplats 5"
     ],
   },
   {
@@ -35,6 +40,8 @@ export const mockBuses = [
       "Hållplats 1",
       "Hållplats 2",
       "Hållplats 3",
+      "Hållplats 4",
+      "Hållplats 5",
       "Hållplats 4",
       "Hållplats 5",
     ],
