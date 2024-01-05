@@ -20,13 +20,14 @@ const BusModal = ({ title, body, show, onHide }: IModal) => {
         <Modal.Header
           closeButton
           closeVariant="white"
-          className="border-0 px-5 pt-5 bg-dark text-center"
+          className="border-0 px-5 pt-5 text-center"
+          style={{ backgroundColor: "#242424" }}
         >
           <Modal.Title>
             <h3>{title}</h3>
           </Modal.Title>
         </Modal.Header>
-        <Modal.Body className="bg-dark px-5 pb-5">
+        <Modal.Body className="px-5 pb-5" style={{ backgroundColor: "#242424" }}>
           <h5 className="px-3 pb-3">Hållplatser:</h5>
           <div style={{ columns: "3 auto" }}>
             {body.map((item, index) => (
