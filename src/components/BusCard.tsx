@@ -34,7 +34,7 @@ const BusCard = () => {
 
   return (
     <>
-      <div className="d-flex flex-row flex-wrap justify-content-center p-5">
+      <div className="d-flex flex-row flex-wrap justify-content-center mt-5">
         {buses.map((bus, index) => (
           <div key={index} className="p-4 m-4">
             <h4>Buss {bus.busLine}</h4>

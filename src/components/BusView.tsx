@@ -6,7 +6,7 @@ const BusView = () => {
 
   return (
     <>
-      <div className="mt-5">
+      <div className="container mt-5">
         <h1>Topp 10 bussar med flest stopp i Stockholm</h1>
         <h5>Listan visar en enkeltur för busslinjen</h5>
         <p className="fst-italic">
