@@ -51,6 +51,7 @@ const BusCard = () => {
                 show={showModal}
                 onHide={closeModal}
                 title={"Buss " + bus.busLine}
+                header="Hållplatser"
                 body={bus.stops}
               />
             )}
