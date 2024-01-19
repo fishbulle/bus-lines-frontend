@@ -1,8 +1,7 @@
 import BusCard from "./BusCard";
 
 const BusView = () => {
-  const SL =
-    "https://www.trafiklab.se/api/trafiklab-apis/sl/stops-and-lines-2/";
+  const SL = import.meta.env.VITE_SL_API;
 
   return (
     <>
