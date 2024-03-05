@@ -1,4 +1,4 @@
-import BusView from "./components/BusView";
+import BusView from './components/BusView';
 
 function App() {
   return (
