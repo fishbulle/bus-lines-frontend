@@ -1,6 +1,6 @@
 export const messages = {
   general: {
-    header: 'Topp 10 bussar med flest stopp i Stockholm<',
+    header: 'Topp 10 bussar med flest stopp i Stockholm',
     subHeader: 'Listan visar en enkeltur för busslinjen',
     text: 'Information hämtad med hjälp av ',
     linkText: 'API från SL',
