@@ -1,20 +1,19 @@
-import BusCard from "./BusCard";
+import { messages } from '../utils/messages';
+import { BusCard } from './BusCard';
 
-const BusView = () => {
+export function BusView() {
   const SL = import.meta.env.VITE_SL_API;
 
   return (
     <>
-      <div className="container mt-5">
-        <h1>Topp 10 bussar med flest stopp i Stockholm</h1>
-        <h5>Listan visar en enkeltur för busslinjen</h5>
-        <p className="fst-italic">
-          Information hämtad med hjälp av <a href={SL}>API från SL</a>
+      <div className='container mt-5'>
+        <h1>{messages.general.header}</h1>
+        <h5>{messages.general.subHeader}</h5>
+        <p className='fst-italic'>
+          {messages.general.text} <a href={SL}>{messages.general.linkText}</a>
         </p>
         <BusCard />
       </div>
     </>
   );
-};
-
-export default BusView;
+}
